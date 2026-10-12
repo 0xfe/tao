@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#faf5e9" />
+    <meta
+      name="description"
+      content="Read all 81 chapters of the Tao Te Ching in traditional Chinese and Derek Lin’s English translation. A quiet, continuous reading experience."
+    />
+    <title>Tao Te Ching · The Way and Its Virtue</title>
+    <link rel="icon" type="image/png" href="{{LOGO}}" />
+    <link
+      rel="preload"
+      href="{{FONT_EN}}"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="{{FONT_ZH}}"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="{{CSS}}" />
+    <script type="module" src="{{JS}}"></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#chapter-01">Skip to the book</a>
+    <header class="masthead">
+      <a
+        class="wordmark"
+        href="#top"
+        aria-label="Tao Te Ching, back to the cover"
+        ><img src="{{LOGO}}" width="42" height="42" alt="" /><span
+          lang="zh-Hant"
+          >道德經</span
+        ></a
+      >
+      <div class="attribution">
+        Original translation by
+        <a href="https://www.amazon.ca/dp/1594732043">Derek Lin</a>
+      </div>
+      <button
+        class="index-open text-button"
+        aria-haspopup="dialog"
+        aria-controls="chapter-index"
+      >
+        Chapters <span aria-hidden="true">↗</span>
+      </button>
+    </header>
+    <canvas class="margin-art" aria-hidden="true"></canvas>
+    <main>
+      <section class="cover" aria-labelledby="book-title">
+        <p class="cover-chinese" lang="zh-Hant">道 德 經</p>
+        <h1 id="book-title" tabindex="-1">Tao Te Ching</h1>
+        <p class="subtitle">The Way and Its Virtue</p>
+        <div class="cover-meta">
+          <span class="eyebrow">Lao Tzu</span
+          ><span class="small-seal" lang="zh-Hant" aria-hidden="true">道</span
+          ><span class="eyebrow">Eighty-one chapters</span>
+        </div>
+        <a class="resume" hidden href="#chapter-01"></a>
+      </section>
+      <div class="book" aria-label="The eighty-one chapters">{{CHAPTERS}}</div>
+      <footer class="colophon">
+        <img src="{{LOGO}}" width="68" height="68" alt="" />
+        <p class="end-title">The way continues.</p>
+        <a href="#top" class="begin"
+          >Return to the beginning <span aria-hidden="true">↑</span></a
+        >
+        <p class="source-note">
+          Original translation by
+          <a href="https://www.amazon.ca/dp/1594732043">Derek Lin</a
+          >.<br />{{NOTICE}}
+        </p>
+        <p class="source-links">
+          <a
+            href="https://taoism.net/wp-content/uploads/2025/11/Tao-Te-Ching.pdf"
+            >Read the source PDF ↗</a
+          ><a href="{{DATA}}" download="tao-te-ching.json"
+            >Bilingual text · JSON ↓</a
+          >
+        </p>
+      </footer>
+    </main>
+    <nav class="reading-nav" aria-label="Reading navigation">
+      <button
+        id="previous"
+        class="icon-button"
+        aria-label="Previous chapter"
+        disabled
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+      <button
+        class="index-open chapter-control"
+        aria-haspopup="dialog"
+        aria-controls="chapter-index"
+      >
+        <span id="current-chapter">81 chapters</span
+        ><svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="m4 6 4 4 4-4" />
+        </svg>
+      </button>
+      <button id="next" class="icon-button" aria-label="Next chapter">
+        <span aria-hidden="true">→</span>
+      </button>
+      <div
+        class="reading-progress"
+        role="progressbar"
+        aria-label="Book progress"
+        aria-valuemin="0"
+        aria-valuemax="81"
+        aria-valuenow="0"
+      >
+        <span></span>
+      </div>
+    </nav>
+    <dialog id="chapter-index" aria-labelledby="index-title">
+      <div class="index-heading">
+        <div>
+          <h2 id="index-title">Chapters</h2>
+        </div>
+        <button
+          id="close-index"
+          class="icon-button"
+          aria-label="Close chapter index"
+        >
+          ×
+        </button>
+      </div>
+      <label class="search-label" for="chapter-search"
+        >Chapter number or words</label
+      >
+      <input
+        type="search"
+        id="chapter-search"
+        placeholder="Search the book…"
+        autocomplete="off"
+      />
+      <div class="index-meta">
+        <span>道德經</span
+        ><span id="search-count" role="status">81 chapters</span>
+      </div>
+      <div class="chapter-list">{{INDEX}}</div>
+      <p class="no-results" hidden>
+        No chapters found. Try another word or number.
+      </p>
+    </dialog>
+    <noscript
+      ><style>
+        .reading-nav,
+        .index-open {
+          display: none;
+        }
+      </style>
+      <p class="no-script">
+        All 81 chapters are available below. Your browser’s Find command can
+        locate a chapter.
+      </p></noscript
+    >
+  </body>
+</html>
