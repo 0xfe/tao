@@ -1,6 +1,6 @@
 # Tao Te Ching
 
-81 chapters translated by Derek Lin.
+81 chapters translated by Derek Lin hosted at [mo.town/tao](https://mo.town/tao).
 
 ## Run locally
 
