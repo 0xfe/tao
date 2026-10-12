@@ -157,11 +157,6 @@ button:hover:not(:disabled) {
   line-height: 0.95;
   margin: 0;
 }
-.subtitle {
-  font-size: clamp(24px, 3vw, 37px);
-  margin: 23px 0 26px;
-  font-weight: 400;
-}
 .cover-meta {
   display: flex;
   justify-content: center;
@@ -585,10 +580,6 @@ dialog::backdrop {
   .cover h1 {
     font-size: clamp(60px, 13vw, 92px);
     letter-spacing: -0.05em;
-  }
-  .subtitle {
-    font-size: 26px;
-    margin: 17px 0 24px;
   }
   .cover-meta {
     gap: 15px;
